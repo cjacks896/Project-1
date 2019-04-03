@@ -1,0 +1,201 @@
+body {
+  background-image: url(../images/lebron.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #FFFFFF
+}
+
+h1 {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 48px;
+  color: #FFFFFF;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+}
+
+section, form {
+  max-width: 600px;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  opacity: .8;
+}
+
+p {
+  margin: 2em;
+  font-size: 22px;
+}
+
+ul {
+  list-style-position: inside;
+  text-align: left;
+  margin-left: 2em;
+  margin-right: 2em;
+  font-size: 22px;
+}
+
+form {
+  background-color: #FFFFFF;
+  margin-top: 1em;
+  padding: .5em;
+  border-radius: 0.5em;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  padding-top: .5em;
+  font-size: 18px;
+}
+
+input {
+  resize: vertical;
+  display: inline-block;
+  width: 150px;
+  padding: .5em .2em .5em .2em;
+  border-radius: .3em;
+  text-align: right;
+}
+
+input[type=text] {
+  text-align: left;
+}
+
+/* EMAIL CSS */
+
+input[type=email] {
+  width: 100%;
+  resize: vertical;
+  width: 200px;
+}
+
+label[type=email] {
+  padding-bottom: .5em;
+}
+
+#email {
+  width: 100%;
+  border-style: hidden;
+  padding: .3em;
+}
+
+/* AGE VERIFICATION CSS */
+
+input[type=date] {
+  padding-top: .3em;
+  padding-bottom: .3em;
+}
+
+label[type=date] {
+  display: inline;
+  width: 100%;
+  padding: .1em;
+}
+
+#date {
+  width: auto;
+  display: inline;
+  vertical-align: top;
+  margin-right: .5em;
+  width: 1em;
+  height: 1em;
+}
+
+/* SUBMIT CSS */
+
+.submission {
+  text-align: center;
+}
+
+input[type=submit],input[type=reset] {
+  text-align: center;
+  font-weight: bold;
+  margin: 2em;
+}
+
+#submit, #reset {
+  width: 70%;
+  height: 2em;
+  border-style: hidden;
+}
+
+/* ===== MODULAR STYLES ===== */
+/* ===== MEDIA  SCALING ===== */
+
+/* MEDIA > Basic Smartphones */
+@media screen and (max-width: 360px){
+  h1 {
+    font-size: 18px;
+    line-height: .1em;
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  p, label, input {
+    font-size: 16px;
+    line-height: .1em;
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+/* MEDIA > Large Tablets */
+@media screen and (max-width: 600px){
+  form {
+    max-width: 360px;
+  }
+  
+  input {
+    display: block;
+    margin-top: 2em;
+  }
+  
+  /* NAME */
+  input[type=text] {
+    width: 50%;
+    display: table;
+  }
+  
+  /* EMAIL */
+  input[type=email] {
+    width: 100%;
+    display: block;
+  }
+  
+  /* AGE VERIFICATION */
+  input[type=date] {
+    display: inline-block;
+    overflow: hidden;
+    width: auto;
+  }
+  
+  /* SUBMIT */
+  input[type=submit], input[type=reset] {
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+  }
+}
+
+/* MEDIA > Larger Laptops, Desktops */
+@media screen and (min-width: 720px){
+  main {
+    width: 720px;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+/* ===== STATE STYLES ======= */
+
+#submit:not(.active):hover {
+  background-color: #ffffff;
+}
+
+#submit.submitted:hover {
+  background-color: #00ff00;
+}
